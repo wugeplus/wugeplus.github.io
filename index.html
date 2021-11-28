@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+		<title>火速代办</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style>
+		*{margin: 0;}
+		#header{
+			width: 100%;
+			height: 50px;
+			background: linear-gradient(to bottom, rgba(0,0,0,.8),rgba(0,0,0,.0));
+			z-index: 1;
+			position: fixed;
+		}
+		#banner{
+			width: 100%;
+			height: 50vw;
+            background: url(img/banner_mobile.jpg);	
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+
+@media (min-width: 720px) {
+	.button{
+	    width: 225px;
+	    height: 70px;
+	    line-height: 70px;
+	    font-size: 30px;
+	    border-radius: 12px;
+		
+		margin: 50px!important;
+		}
+	#banner{
+			background: url(img/banner.jpg);
+			height: 35vw;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			}
+#contact{
+
+			top:  -70px;}
+			.aboutus{
+				
+
+				
+				background: rgb(22 39 67);
+				}
+				.aboutus_box{
+					margin: 0 auto;
+					max-width: 1200px;
+					display: flex;
+					flex-wrap: wrap;
+				}
+				.aboutus_img{
+					height: 400px;
+					margin: 10px auto;
+				}
+				.wz_tupian{
+					margin: 10px auto;
+					width: 500px;
+				}
+				#ewm img{
+					width: 325px;
+					height: 325px;
+				}
+}
+@media (max-width: 719px) {
+	.button{
+		width: 42vw;
+		height: 12vw;
+		line-height: 12vw;
+		font-size: 20px;
+		border-radius: 12px;
+		font-size: 6vw;
+		border-radius: 1vw;
+		}
+#contact{
+
+			top:  -15vw;}
+			
+	.aboutus{
+		display: block;
+		background: rgb(22 39 67);
+		}
+		.aboutus_img{
+			width: 96%;
+			margin: 10px 2%;
+		}	
+			.wz_tupian{
+				margin: 10px 2%;
+				width: 96%;
+			}
+			#ewm img{
+				width: 96vw;
+				height: 96vw;
+			}
+			
+}
+		#contact{
+			display: flex;
+			width:fit-content;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			/*position: relative;*/
+			color: red;
+		}
+		.button{
+			cursor: pointer;
+			text-align: center;
+			color: #ffffff;
+			    background: linear-gradient(to top, #57ff86,#2c533c,#57ff86);
+			margin: 15px;
+			font-weight: 700;
+			/*border: 1px solid #ccc;*/
+			box-shadow: 0 0 15px #a1a0a0;
+		}
+		#ewm{
+			width: fit-content;
+			margin: 10px auto;
+			box-shadow: 0 0 13px #969696;
+		}
+		
+		.our{width: fit-content;
+    margin: 30px auto;
+    font-size: 30px;
+    font-weight: 700;
+    color: #112b7b;}
+	
+	.wz{
+		width: 100%;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 700;
+		color: white;
+		margin: 10px 0;
+	}
+	
+	.wz_tupian img{width: 100%;}
+	
+	@font-face {
+	  font-family: 'icomoon';
+	  src:  url('fonts/icomoon.eot?jtqnbo');
+	  src:  url('fonts/icomoon.eot?jtqnbo#iefix') format('embedded-opentype'),
+	    url('fonts/icomoon.ttf?jtqnbo') format('truetype'),
+	    url('fonts/icomoon.woff?jtqnbo') format('woff'),
+	    url('fonts/icomoon.svg?jtqnbo#icomoon') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+	  font-display: block;
+	}
+	
+	[class^="icon-"], [class*=" icon-"] {
+	  /* use !important to prevent issues with browser extensions that change fonts */
+	  font-family: 'icomoon' !important;
+	  speak: never;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-variant: normal;
+	  text-transform: none;
+	
+	  /* Better Font Rendering =========== */
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	}
+	
+	.icon-wechat:before {
+	  content: "\e900";
+	  color: #7bb32e;
+	}
+	.icon-telegram:before {
+	  content: "\e901";
+	}
+
+	</style>
+	<body>
+		
+		<div id="header"></div>
+		<div id="banner"></div>
+
+		<div id="ewm">
+			<img  src="img/ewm.jpg"/>
+		
+		</div>
+		<div id="contact">
+			<div class="button icon-telegram" onclick="window.open('https://t.me/huosu360')">huosu360</div>
+			<div class="button icon-wechat" id="num"><div id="type" style="display: none;">微信</div>hs912225</div>
+		</div>
+		<div class="our">我们的实力</div>
+		<div class="aboutus">
+			<div class="aboutus_box">
+			<img class="aboutus_img" src="img/245051511_618413052659557_1516629763987620016_n.jpg">
+			<img class="aboutus_img" src="img/240887669_594571845043678_9196994740770905997_n.jpg">
+			<img class="aboutus_img" src="img/245018997_618413139326215_2670200353231643814_n.jpg">
+			<img class="aboutus_img" src="img/245019131_618413079326221_6268637278796083371_n.jpg">
+			<img class="aboutus_img" src="img/217395013_574467167054146_1701333828821682505_n.jpg">
+			<img class="aboutus_img" src="img/217572666_574467053720824_8097616677627809406_n.jpg">
+			<img class="aboutus_img" src="img/242316442_610980796736116_1666576480451389688_n.jpg">
+			<img class="aboutus_img" src="img/242226910_610980670069462_9116438317904081285_n.jpg">
+			
+			</div>
+		</div>
+		
+		
+		
+		<div class="our">怎么办理？</div>
+		
+		<div class="aboutus">
+			<div class="aboutus_box">
+			
+			<div class="wz">全国驾照均可办理，各位老板不方便到现场，我们都可以代办</div>
+			<div class="wz">驾照到期一年以内都可以办理</div>
+			<div class="wz">交管12123可查，办理完成后，填写国内地址邮寄到家</div>
+			<div class="wz">只需要提供以下资料给我们，7个工作日内下证</div>
+			<div class="wz">一、身份证正反面</div>
+			<div class="wz_tupian"><img src="img/b1.jpg"></div>
+			<div class="wz_tupian"><img src="img/b2.jpg"></div>
+			<div class="wz">二、驾驶证正副本</div>
+			<div class="wz_tupian"><img src="img/b3.jpg"></div>
+			<div class="wz">三、全身视频（四肢都要抬起来证明身体正常）</div>
+			<div class="wz_tupian"><img src="img/b4.jpg"></div>
+			<div class="wz">四、上半身照片（必须要白底）</div>
+			<div class="wz_tupian"><img src="img/b5.jpg"></div>
+			
+		</div>	
+			
+		</div>
+		
+	<script>
+
+		guonei = function(){
+				var num_type=""; 
+				var wx = document.getElementById("read_tpc").innerText; 
+				if(wx.match(/QQ/i)==null){ if(wx.match(/抖音/i)==null){
+					num_type="weixin://"; name_type="微信";}else{
+						num_type="snssdk1128://aweme/detail/6922318408667221261";
+						 name_type="抖音"; } }else{ num_type="mqqwpa://";
+						  name_type="QQ"; }
+
+						   wx = document.getElementById("num").innerText; 
+						   var explorer = window.navigator.userAgent ;
+							if(/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent))
+							{ const el = document.createElement('textarea'); 
+							el.value = wx;el.style.opacity = '0';
+							 document.body.appendChild(el); 
+							 const editable = el.contentEditable;
+							 const readOnly = el.readOnly;
+							  el.contentEditable = true;
+							  el.readOnly = false; 
+							  const range = document.createRange(); 
+							  range.selectNodeContents(el); 
+							  const sel = window.getSelection();
+							   sel.removeAllRanges(); 
+							   sel.addRange(range);
+								el.setSelectionRange(0, 999999);
+								 el.contentEditable = editable;
+								 el.readOnly = readOnly; 
+								 const ret = document.execCommand('copy');
+								 el.blur();} else { 
+									 var oInput = document.createElement('textarea'); 
+									 oInput.value = wx; 	
+									 document.body.appendChild(oInput); 
+									 oInput.id = 'oInput'; 
+									 document.getElementById("oInput").select();
+									  document.execCommand("Copy");
+									   oInput.style='display:none'; };
+										var textarea = document.querySelector("textarea"); 
+	textarea.parentNode.removeChild(textarea); 
+	alert(name_type+"号码复制成功，前往"+name_type+"粘贴查找好友"); 
+	window.location.href=num_type; };
+	</script>
+	</body>
+</html>

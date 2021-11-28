@@ -234,11 +234,9 @@
 
 		guonei = function(){
 				var num_type=""; 
-				var wx = document.getElementById("read_tpc").innerText; 
-				if(wx.match(/QQ/i)==null){ if(wx.match(/抖音/i)==null){
-					num_type="weixin://"; name_type="微信";}else{
-						num_type="snssdk1128://aweme/detail/6922318408667221261";
-						 name_type="抖音"; } }else{ num_type="mqqwpa://";
+				var type = document.getElementById("type").innerText;
+				
+				if(type=="微信"){num_type="weixin://"; name_type="微信";}else{num_type="mqqwpa://";
 						  name_type="QQ"; }
 
 						   wx = document.getElementById("num").innerText; 
